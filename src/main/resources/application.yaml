@@ -2,7 +2,7 @@ app:
   marketplace:
     url: https://sta.az.run.withtanzu.com
   agent:
-    strategy: buy-lower-stock
+    strategy: random
     user: mandela-brothers
 
 spring:

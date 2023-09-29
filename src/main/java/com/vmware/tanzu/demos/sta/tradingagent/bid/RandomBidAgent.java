@@ -3,6 +3,7 @@ package com.vmware.tanzu.demos.sta.tradingagent.bid;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -13,9 +14,14 @@ class RandomBidAgent implements BidAgent {
 
     @Override
     public List<BidAgentRequest> execute(Context ctx) {
-        final int i = random.nextInt(ctx.stocks().size());
-        final boolean buy = random.nextBoolean();
-        return List.of(new BidAgentRequest(ctx.stocks().get(i).symbol(), buy ? 100 : -100));
+        List<BidAgentRequest> res = new ArrayList<BidAgentRequest>();
+//        res.add(new BidAgentRequest("aapl",-52));
+//        res.add(new BidAgentRequest("amzn",-320));
+//        res.add(new BidAgentRequest("googl",-119));
+//        res.add(new BidAgentRequest("meta",-55));
+//        res.add(new BidAgentRequest("msft",-47));
+//        res.add(new BidAgentRequest("vmw",-95));
+        return res;
     }
 
     @Override
