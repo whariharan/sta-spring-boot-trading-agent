@@ -43,7 +43,7 @@ class BidController {
         try {
             userInfoResp = client.getForEntity("/api/v1/users/" + user, UserInfo.class);
         } catch (RestClientException e) {
-            logger.warn("Failed to lookup user: {}", user, e);
+            logger.warn("Fail to lookup user: {}", user, e);
             out.println("Failed to lookup user: " + user);
             return;
         }
