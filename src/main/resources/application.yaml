@@ -3,11 +3,24 @@ app:
     url: https://sta.az.run.withtanzu.com
   agent:
     strategy: buy-lower-stock
-    user: mandela-users
+    user: mandela-brothers
 
 spring:
   application:
     name: sta-spring-boot-trading-agent
+  security:
+    oauth2:
+      client:
+        registration:
+          sso:
+            client-id: sta_mandela-brothers
+            client-secret: 6414dfb0-1ed0-430b-b09a-046834aa84be
+            authorization-grant-type: client_credentials
+            scope:
+              - bid
+        provider:
+          sso:
+            issuer-uri: https://login.sso.az.run.withtanzu.com
 
 management:
   metrics:
