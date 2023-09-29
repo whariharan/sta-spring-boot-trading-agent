@@ -7,5 +7,5 @@ stringData:
   provider: sandbox
   type: config
   app.marketplace.url: https://sta.az.run.withtanzu.com
-  app.agent.strategy: buy-lower-stock
+  app.agent.strategy: random
   app.agent.user: mandela-users
